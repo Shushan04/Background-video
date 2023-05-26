@@ -1,80 +1,138 @@
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-  }
-  .header{
-    background:#252424;
-    height: 100vh;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.header-container {
+  position: relative;
+  z-index: 99;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;  
 
+  .welcome-container {
+      display: flex;
+     flex-direction: column;
+      align-items: center;
 
-    .text{
-        position: absolute;
-         top: 0;
-         left: 0;
-         z-index: 2;
-         width: 100%;
-         height: 100vh;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         background-color: rgba(0,0,0,0.6);
-      } 
-       .text h1{
-        z-index: 2;
-        font-size: 50px;
-        color:#fff;
-        //margin-top: 50px;
-        margin-left: 50px;
-       }
-         #bg-video{
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%; 
-        min-height: 100%;
-        z-index: 1;
-         } 
-         #click{
-          background-color: rgb(255,69,0);
+      h1 {
+          font-size: 60px;
+          color: white;
+
+        }
+        .click {
+          background-color: orangered;
           padding: 10px 25px;
+          border: 1px solid #e61010;
           border-radius: 2px;
-           border: 1px solid rgb(255,69,0);
-           margin-top: 30px;
+          cursor: pointer;
           &:hover{
             background-color: rgb(216, 58, 1);
             transform: 2s;
+         }
+          p{
+              color: white;
+              font-size: 15px;
           }
-          h3{
-            color: #fff;
+        }
+        .placeholder{
+          width: 400px;
+          background: #fff;
+          border-radius: 5px;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%,-50%)scale(0.1);
+          text-align: center;
+          padding: 20px;
+          color: orangered;
+          display: flex;
+          flex-direction: column;
+          visibility: hidden;
+          transition: transform 0.4s, top 0.4s;
+          .open{
+            top: 50%;
+            visibility: visible;
+            transform: translate(-50%,-50% )scale(1);
           }
-         } 
-
-          #pause-play{
-            position: relative;
-            margin-top: 200px;
-            padding: 10px;
-            background-color: rgb(255, 69, 0);
-            border: 1px solid rgb(255,69,0);
-            border-radius: 2px;
+          .close-icon{
+            position: absolute;
+            right: 20px;
             cursor: pointer;
-            .fa{
-              color: #fff;
-              
-            }
+          }
+          h2{
+            color: orangered;
+            margin: 10px;
+          }
+          label{
+            font-size: 12px;
+            margin: 5px;
+          }
+          input{
+            margin: 10PX;
+            padding: 10px;
+            border-radius: 5px;
+            border:1px solid color(orangered);
+          }
+          button{
+            padding: 6px;
+            background: orangered;
+            border-radius: 5px;
+            border: color(orangered);
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
             &:hover{
               background-color: rgb(216, 58, 1);
               transform: 2s;
             }
-           }
-         
+          }
+         }
+    }
+  h2 {
+      font-size: 40px;
+      color: white;
+   }
+    .btn-video {
+      padding: 8px;
+      border-radius: 5px color white;
+      position: relative;
+      bottom: 40px;
+      background-color: gray;
+      border-color: gray;
+      color: white;
+      font-size: 20px;
+      border: 1px solid #c4b2b2;
+      border-radius: 2px;
+      cursor: pointer;
+      &:hover{
+          background-color: rgb(105, 101, 101);
+          transform: 1s;
+      }
+    }                                                                                                                                                                        
+}
 
-         
-  
-  }
+.background-video {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  filter: brightness(30%);
+}
 
 
- 
-  
+
+
+
+
+
 
 

@@ -4,33 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://i.pinimg.com/originals/2a/ff/5d/2aff5d3ae14a89142c768228c5c2d4ec.png"> 
     <link rel="stylesheet" href="./css/style.css">
-    <title>Website</title>
+    <title>Background Video</title>
 </head>
 <body>
-    <section class="header">
-     <div class="text">
-        <h1>Welcome To Our Website</h1>
+    <div class="header-container" id="div1">
+        <div class="welcome-container">
+            <h1>Welcome to our website</h1>
+            <div class="container">
+                <button class="click" id="click-to-join" onclick="openContainer()">
+                    <p>Click to join</p> 
+                 </button>
+                 <div class ='placeholder'>
+                    <h2>20% OFF Offer</h2>
+                    <div class="close-icon" onclick="closeContainer()">
+                        <i class="fas fa-times fa-2x"></i>
+                    </div>
+                    <label for="email">Your Email</label> 
+                    <input type="email" placeholder="Enter Your Email">
+                    <button class="join">Join</button>
+                  </div>
+            </div>
 
-          <button id="click">
-             <h3>Click To Join</h3> 
-          </button>
+        </div>
+        <h2>Sahand Ghavidel</h2>
+        <button  onclick="boo()" class="btn-video">
+            <i id="playPause" class="fa fa-pause" aria-hidden="true"></i>
+        </button>
+      </div>
 
-          <div id="btn_play_pause">
-               <button id="pause-play">
-                    <i class="fa fa-pause"></i>
-                </button>
-          </div>       
-    </div>
-
-
-     <video id="bg-video" autoplay muted loop >
-        <source src="./video/background-video.mp4" type="video/mp4">
-     </video>
-
-    </section>
-    <script src="https://kit.fontawesome.com/926ff3f4c9.js" crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
-</body>
-</html>
+      <div id="video-page">
+          <video id="video" class="background-video" muted autoplay loop src="./video/background-video.mp4">background video</video>
+      </div>
+  
+      <script src="https://kit.fontawesome.com/926ff3f4c9.js" crossorigin="anonymous"></script>
+      <script src="/script/index.js"></script>
+  </body>
+  </html>
