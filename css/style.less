@@ -5,100 +5,90 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .header-container {
-  position: relative;
-  z-index: 99;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100vh;  
-
-  .welcome-container {
+position: relative;
+z-index: 99;
+align-items: center;
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+height: 100vh;
+.welcome-container {
       display: flex;
-     flex-direction: column;
+      flex-direction: column;
       align-items: center;
-
       h1 {
-          font-size: 60px;
-          color: white;
-
-        }
-        .click {
-          background-color: orangered;
-          padding: 10px 25px;
-          border: 1px solid #e61010;
-          border-radius: 2px;
-          cursor: pointer;
-          &:hover{
-            background-color: rgb(216, 58, 1);
-            transform: 2s;
-         }
-          p{
+              font-size: 60px;
               color: white;
-              font-size: 15px;
+       }
+       .click {
+              background-color: orangered;
+              padding: 10px 25px;
+              border: 1px solid #e61010;
+              border-radius: 2px;
+              cursor: pointer;
+              &:hover {
+                      background-color: #d83a01;
+                      transform: 2s;
+               }
+               p {
+                      color: white;
+                      font-size: 15px;
+               }
+       }
+}
+.popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 400px;
+background: #fff;
+border-radius: 5px;
+padding: 20px;
+color: orangered;
+display: none;
+.popup-content {
+text-align: center;
+h2 {
+      font-size: 40px;
+      color: #d83a01;
+      margin: 10px;
+  }
+  .close-icon{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  }
+  label {
+  margin: 10px;
+
+ }
+ input {
+      width: 300px;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ff4500;
+    }
+    button {
+          padding: 6px;
+          background: orangered;
+          border-radius: 5px;
+          border: #ff4500;
+          color: #fff;
+          font-size: 15px;
+          cursor: pointer;
+          &:hover {
+                  background-color: #d83a01;
+                  transform: 2s;
           }
         }
-        .placeholder{
-          width: 400px;
-          background: #fff;
-          border-radius: 5px;
-          position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translate(-50%,-50%)scale(0.1);
-          text-align: center;
-          padding: 20px;
-          color: orangered;
-          display: flex;
-          flex-direction: column;
-          visibility: hidden;
-          transition: transform 0.4s, top 0.4s;
-          .open{
-            top: 50%;
-            visibility: visible;
-            transform: translate(-50%,-50% )scale(1);
-          }
-          .close-icon{
-            position: absolute;
-            right: 20px;
-            cursor: pointer;
-          }
-          h2{
-            color: orangered;
-            margin: 10px;
-          }
-          label{
-            font-size: 12px;
-            margin: 5px;
-          }
-          input{
-            margin: 10PX;
-            padding: 10px;
-            border-radius: 5px;
-            border:1px solid color(orangered);
-          }
-          button{
-            padding: 6px;
-            background: orangered;
-            border-radius: 5px;
-            border: color(orangered);
-            color: #fff;
-            font-size: 15px;
-            cursor: pointer;
-            &:hover{
-              background-color: rgb(216, 58, 1);
-              transform: 2s;
-            }
-          }
-         }
-    }
-  h2 {
-      font-size: 40px;
-      color: white;
-   }
-    .btn-video {
+}
+}
+.btn-video {
       padding: 8px;
-      border-radius: 5px color white;
+      border-radius: 25px color white;
       position: relative;
       bottom: 40px;
       background-color: gray;
@@ -108,31 +98,25 @@
       border: 1px solid #c4b2b2;
       border-radius: 2px;
       cursor: pointer;
-      &:hover{
-          background-color: rgb(105, 101, 101);
-          transform: 1s;
-      }
-    }                                                                                                                                                                        
+      &:hover {
+              background-color: #696565;
+              transform: 1s;
+       }
 }
-
+h2{
+color: #fff;
+font-size: 50px;
+}
+}
 .background-video {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  object-fit: cover;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  filter: brightness(30%);
+width: 100%;
+height: 100vh;
+position: absolute;
+object-fit: cover;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 1;
+filter: brightness(30%);
 }
-
-
-
-
-
-
-
-
-

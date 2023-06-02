@@ -14,3 +14,15 @@ function boo() {
     }
 
 }
+
+
+
+function openPopup() {
+    var popup = document.getElementById("popup-container");
+    popup.style.display = "block";
+  }
+  
+  function closePopup() {
+    var popup = document.getElementById("popup-container");
+    popup.style.display = "none";
+  }

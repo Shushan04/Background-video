@@ -37,47 +37,43 @@
   color: white;
   font-size: 15px;
 }
-.header-container .welcome-container .placeholder {
+.header-container .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 400px;
   background: #fff;
   border-radius: 5px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.1);
-  text-align: center;
   padding: 20px;
   color: orangered;
-  display: flex;
-  flex-direction: column;
-  visibility: hidden;
-  transition: transform 0.4s, top 0.4s;
+  display: none;
 }
-.header-container .welcome-container .placeholder .open {
-  top: 50%;
-  visibility: visible;
-  transform: translate(-50%, -50%) scale(1);
+.header-container .popup .popup-content {
+  text-align: center;
 }
-.header-container .welcome-container .placeholder .close-icon {
+.header-container .popup .popup-content h2 {
+  font-size: 40px;
+  color: #d83a01;
+  margin: 10px;
+}
+.header-container .popup .popup-content .close-icon {
   position: absolute;
+  top: 10px;
   right: 20px;
   cursor: pointer;
 }
-.header-container .welcome-container .placeholder h2 {
-  color: orangered;
+.header-container .popup .popup-content label {
   margin: 10px;
 }
-.header-container .welcome-container .placeholder label {
-  font-size: 12px;
-  margin: 5px;
-}
-.header-container .welcome-container .placeholder input {
-  margin: 10PX;
+.header-container .popup .popup-content input {
+  width: 300px;
+  margin: 10px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ff4500;
 }
-.header-container .welcome-container .placeholder button {
+.header-container .popup .popup-content button {
   padding: 6px;
   background: orangered;
   border-radius: 5px;
@@ -86,17 +82,13 @@
   font-size: 15px;
   cursor: pointer;
 }
-.header-container .welcome-container .placeholder button:hover {
+.header-container .popup .popup-content button:hover {
   background-color: #d83a01;
   transform: 2s;
 }
-.header-container h2 {
-  font-size: 40px;
-  color: white;
-}
 .header-container .btn-video {
   padding: 8px;
-  border-radius: 5px color white;
+  border-radius: 25px color white;
   position: relative;
   bottom: 40px;
   background-color: gray;
@@ -110,6 +102,10 @@
 .header-container .btn-video:hover {
   background-color: #696565;
   transform: 1s;
+}
+.header-container h2 {
+  color: #fff;
+  font-size: 50px;
 }
 .background-video {
   width: 100%;

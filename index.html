@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Background Video</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Background Video</title>
 </head>
 <body>
-    <div class="header-container" id="div1">
-        <div class="welcome-container">
-            <h1>Welcome to our website</h1>
-            <div class="container">
-                <button class="click" id="click-to-join" onclick="openContainer()">
-                    <p>Click to join</p> 
-                 </button>
-                 <div class ='placeholder'>
-                    <h2>20% OFF Offer</h2>
-                    <div class="close-icon" onclick="closeContainer()">
-                        <i class="fas fa-times fa-2x"></i>
-                    </div>
-                    <label for="email">Your Email</label> 
-                    <input type="email" placeholder="Enter Your Email">
-                    <button class="join">Join</button>
-                  </div>
-            </div>
-
-        </div>
-        <h2>Sahand Ghavidel</h2>
-        <button  onclick="boo()" class="btn-video">
-            <i id="playPause" class="fa fa-pause" aria-hidden="true"></i>
+  <div class="header-container" id="div1">
+    <div class="welcome-container">
+      <h1>Welcome to our website</h1>
+      <div class="container">
+        <button class="click" id="click-to-join" onclick="openPopup()">
+          <p>Click to join</p>
         </button>
+        <div id="popup-container" class="popup">
+          <div class="popup-content">
+            <h2>20% OFF Offer</h2>
+            <div class="close-icon" onclick="closePopup()">
+              <i class="fas fa-times fa-2x"></i>
+            </div>
+            <label for="email">Your Email</label>
+            <input type="email" placeholder="Enter Your Email">
+            <button class="join">Join</button>
+          </div>
+        </div>
       </div>
+    </div>
+    <h2>Sahand Ghavidel</h2>
+    <button onclick="boo()" class="btn-video">
+      <i id="playPause" class="fa fa-pause" aria-hidden="true"></i>
+    </button>
+  </div>
 
-      <div id="video-page">
-          <video id="video" class="background-video" muted autoplay loop src="./video/background-video.mp4">background video</video>
-      </div>
-  
-      <script src="https://kit.fontawesome.com/926ff3f4c9.js" crossorigin="anonymous"></script>
-      <script src="/script/index.js"></script>
-  </body>
-  </html>
+  <div id="video-page">
+    <video id="video" class="background-video" muted autoplay loop src="./video/background-video.mp4">background video</video>
+  </div>
+
+  <script src="https://kit.fontawesome.com/926ff3f4c9.js" crossorigin="anonymous"></script>
+  <script src="./script/index.js"></script>
+</body>
+</html>
