@@ -1,7 +1,7 @@
 let video = document.getElementById("video");
 
 
-function boo() {
+function playPauseBtn() {
     let playIcon = document.getElementById("playPause");
     if (playIcon.classList.contains('fa-play')) {
         playIcon.classList.remove('fa-play');
